@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>U2-W3-D1_Esercizi sulle classi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <form action=""></form>
+    <div class="container">
+      <div class="row row-cols-1 mb-5 w-50 mx-auto">
+        <div class="col text-center my-3">
+          <h1>ESERCIZIO 2</h1>
+        </div>
+        <div class="col">
+          <!-- INZIO FORM -->
+          <form>
+            <div class="mb-3">
+              <label for="petNameInput" class="form-label">Pet name</label>
+              <input type="text" class="form-control" id="petNameInput" placeholder="Write the pet name here..." />
+            </div>
+            <div class="mb-3">
+              <label for="ownerNameInput" class="form-label">Owner name</label>
+              <input type="text" class="form-control" id="ownerNameInput" placeholder="Write the owner name here..." />
+            </div>
+
+            <!-- INZIO SELEZIONE -->
+            <div class="mb-3">
+              <label for="petSpeciesInput" class="form-label">Pet species</label>
+              <select class="form-select" id="petSpeciesInput" aria-label="Default select example">
+                <option selected>Select the pet species</option>
+                <option value="Cane">Cane</option>
+                <option value="Gatto">Gatto</option>
+                <option value="Coniglio">Coniglio</option>
+              </select>
+            </div>
+            <!-- FINE SELEZIONE -->
+            <div class="mb-3">
+              <label for="petBreedInput" class="form-label">Pet breed</label>
+              <input type="text" class="form-control" id="petBreedInput" placeholder="Write the pet breed here..." />
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3 w-100">SUBMIT A NEW PET</button>
+          </form>
+          <!-- FINE FORM  -->
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

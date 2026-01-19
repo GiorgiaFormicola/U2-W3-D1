@@ -1,6 +1,6 @@
 // ESERCIZIO 1
 
-class User {
+/* class User {
   constructor(_firstName, _lastName, _age, _location) {
     this.firstName = _firstName;
     this.lastName = _lastName;
@@ -31,4 +31,41 @@ user1.compareAge(user3); //Comparazione x-z
 user2.compareAge(user1); //Comparazione y-x
 user2.compareAge(user3); //Comparazione y-z
 user3.compareAge(user1); //Comparazione z-x
-user3.compareAge(user2); //Comparazione z-y
+user3.compareAge(user2); //Comparazione z-y */
+
+// ESERCIZIO 2
+
+class Pet {
+  constructor(_petName, _ownerName, _species, _breed) {
+    this.petName = _petName;
+    this.ownerName = _ownerName;
+    this.species = _species;
+    this.breed = _breed;
+  }
+  compareOwners = function (pet) {
+    return this.ownerName === pet.ownerName;
+  };
+}
+
+const petsList = [];
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const petName = document.getElementById("petNameInput").value;
+  const ownerName = document.getElementById("ownerNameInput").value;
+  const petSpecies = document.getElementById("petSpeciesInput").value;
+  const petBreed = document.getElementById("petBreedInput").value;
+
+  const newPet = new Pet(petName, ownerName, petSpecies, petBreed);
+
+  petsList.push(newPet);
+
+  if (petsList.length > 1) {
+    console.log(petsList[petsList.length - 1].compareOwners(petsList[petsList.length - 2]));
+  }
+
+  form.reset();
+});
