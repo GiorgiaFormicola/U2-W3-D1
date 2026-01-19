@@ -61,7 +61,11 @@ form.addEventListener("submit", function (e) {
 
   const newPet = new Pet(petName, ownerName, petSpecies, petBreed);
 
+  console.log(newPet);
+
   petsList.push(newPet);
+
+  console.log(petsList);
 
   if (petsList.length > 1) {
     console.log(petsList[petsList.length - 1].compareOwners(petsList[petsList.length - 2]));
